@@ -12,6 +12,6 @@ $fb = new Facebook\Facebook([
 $helper = $fb->getRedirectLoginHelper();
 
 $permissions = ['manage_pages', 'pages_show_list']; // ตรงนี้แล้วแต่จะใส่ครับ
-$loginUrl = $helper->getLoginUrl('fb-callback.php', $permissions);
+$loginUrl = $helper->getLoginUrl('/fb-callback.php', $permissions);
 
 echo '<a href="' . htmlspecialchars($loginUrl) . '">Log in with Facebook!</a>';
